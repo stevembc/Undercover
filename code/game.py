@@ -7,7 +7,6 @@ class Game:
 
     def __init__(self):
         self.is_playing = False
-        #self.all_players = pygame.sprite.Group()
 
     def start(self):
         self.is_playing = True
@@ -15,7 +14,7 @@ class Game:
     def game_over(self):
         print("YOU LOOSE")
 
-    def update(self, background):
+""" def update(self, background):
         display_surface.blit(background, background_rect)
         display_surface.blit(self.player.image, self.player.rect)
-        display_surface.blit(j1.image, j1.rect)
+        display_surface.blit(j1.image, j1.rect)"""
