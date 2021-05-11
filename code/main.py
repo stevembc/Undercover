@@ -1,7 +1,6 @@
 from data import *
 from player import *
 from game import *
-from Map import Map_alea
 import pygame
 
 pygame.init()
@@ -9,12 +8,13 @@ frame_per_sec = pygame.time.Clock()
 pygame.display.set_caption("Undercover")
 display_surface = pygame.display.set_mode((WIDTH,HEIGHT))
 
+
 #Accueil
 fnd = pygame.image.load('img/accueil/fnd.jpeg') #Background
 accueil = pygame.image.load('img/accueil/start.png') #Icon du jeux
 accueil = pygame.transform.scale(accueil, (150, 150)) #La taille
 accueil_rect = accueil.get_rect(center = (WIDTH/2,HEIGHT/6)) #L'emplacement
-
+#Dossier perssonnage
 nehoc = pygame.image.load('img/accueil/dossier.png') #Dossier 1
 nehoc_rect = nehoc.get_rect(center = (WIDTH/7,HEIGHT/2))
 voltaire = pygame.image.load('img/accueil/dossier.png') #Dossier 2
@@ -24,12 +24,11 @@ casey_rect = casey.get_rect(center = (WIDTH/1.60,HEIGHT/2))
 drozdov = pygame.image.load('img/accueil/dossier.png') #Dossier 4
 drozdov_rect = drozdov.get_rect(center = (WIDTH/1.15,HEIGHT/2))
 
-
-#Page 1
-background = pygame.image.load('img/map/hotel.jpeg')
+#Map   
+background = pygame.image.load('img/map/bar_ang.jpeg')
 
 game = Game()
-Map = Map_alea()
+#Background aléatoire
 
 while True:
 
@@ -51,6 +50,7 @@ while True:
         elif event.type == pygame.MOUSEBUTTONDOWN:
             if accueil_rect.collidepoint(event.pos):
                 game.start()
+                
 
     pygame.display.flip()
     pygame.display.update()

@@ -2,7 +2,6 @@ import pygame
 from player import *
 from data import *
 
-
 class Game:
 
     def __init__(self):
@@ -10,6 +9,7 @@ class Game:
 
     def start(self):
         self.is_playing = True
+        
 
     def game_over(self):
         print("YOU LOOSE")
