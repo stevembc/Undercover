@@ -10,7 +10,6 @@ class Game:
     def start(self):
         self.is_playing = True
         
-
     def game_over(self):
         print("YOU LOOSE")
 
