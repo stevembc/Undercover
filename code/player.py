@@ -13,3 +13,14 @@ class Nehoc(pygame.sprite.Sprite):
         self.rect = self.image.get_rect(center = (WIDTH/5,HEIGHT/1.5))
 
 
+""" une def pour le cumule de points
+    Au bout de 1 points tu peux soumettre un mot
+    Au bout de 2 points tu peux montrer la première lettre de l'adversaire ou montrer le domaine du mot adverse
+    Au bout de 3 points tu peux montrer la dernière lettre de l'adversaire
+    Au bout de 4 points tu peux montrer le nombre de lettre
+"""
+    #Après chaque nom de domaine le perso obtient 1 point
+    #une def pour soumettre un mot et si le mot est les même que celui de l'adversaire: print("win") else print("wrong')
+
+# TROUVER UN MOYEN D'AFFICHER LES VALEURS QUE L'ONT A RENTRÈ
+

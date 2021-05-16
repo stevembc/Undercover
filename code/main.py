@@ -1,10 +1,13 @@
 from data import *
 from player import *
 from game import *
+from tableau import *
+from mots import *
 import pygame
 import random
 
 pygame.init()
+
 frame_per_sec = pygame.time.Clock()
 pygame.display.set_caption("Undercover")
 display_surface = pygame.display.set_mode((WIDTH,HEIGHT))
@@ -12,6 +15,7 @@ display_surface = pygame.display.set_mode((WIDTH,HEIGHT))
 
 #Icone du jeux
 fnd = pygame.image.load('img/accueil/fnd.jpeg') #Background
+fnd = pygame.transform.scale(fnd, (WIDTH, HEIGHT))
 accueil = pygame.image.load('img/accueil/start.png') #Icon du jeux
 accueil = pygame.transform.scale(accueil, (150, 150)) #La taille
 accueil_rect = accueil.get_rect(center = (WIDTH/2,HEIGHT/6)) #L'emplacement
@@ -33,13 +37,23 @@ listeMap = [pygame.image.load('img/map/bar_ang.jpeg'),
             pygame.image.load('img/map/inc.jpeg'),
             pygame.image.load('img/map/toit.jpeg')]
 zone = random.choice(listeMap)
+zone = pygame.transform.scale(zone, (WIDTH, HEIGHT))
+
+#FONT
+
 
 #Appel des classes pour le main
 game = Game()
 joueur = Nehoc()
+table = Tableau()
+#synonyme = Synonyme()
+
+
 
 all_sprite = pygame.sprite.Group()
 all_sprite.add(joueur)
+all_sprite.add(table)
+#all_sprite.add(synonyme)
 
 
 #Boucle du jeux
@@ -48,6 +62,8 @@ while True:
     #Gameplay
     if game.is_playing:
         display_surface.blit(zone, (0,0))
+        #display_surface.blit(synonyme, (WIDTH/1.15,HEIGHT/2))
+        
         for entity in all_sprite:
             display_surface.blit(entity.image, entity.rect)  
 

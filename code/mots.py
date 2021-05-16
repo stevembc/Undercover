@@ -1,18 +1,24 @@
+import pygame
+import random
 
-"""class Map_alea(pygame.sprite.Sprite):
+#Domaine   #Liste de mots
+class Synonyme:
 
-    def __init__(self, lieu):
-        super().__init__()
-        if lieu == "bar_ang":
-            self.bar_ang = pygame.image.load('img/map/bar_ang.jpeg')
-            self.bar_ang_rect = self.bar_ang.get_rect(center = (WIDTH/2,HEIGHT/2))
+    Avocat = ["Défenseur", "Agrréé", "Magistrat", "Représentant", "allié", "belligérant", "libérateur", "soutien", "redresseur de torts ",
+            "plaideur", "requérant", "champion"]
+    random.shuffle(Avocat)
+    Avocat0 = Avocat[0]
+    Avocat1 = Avocat[1]        
+    Avocat2 = Avocat[2]
 
-        elif lieu == "bar_fr":
-            self.bar_fr = pygame.image.load('img/map/bar_fr.jpeg')
-            self.bar_fr_rect = self.bar_fr.get_rect(center = (WIDTH/2,HEIGHT/2))
+    #font = pygame.font.Font("img/typo/NotoSansJP-Regular.otf", 15)
+    #Mots = Avocat0 ,Avocat1, Avocat2, Avocat3
+    #synonyme = font.render(f"{Mots}", 1, (255, 255, 255))
 
-        elif lieu == "bar_rus":
-            self.bar_rus = pygame.image.load('img/map/bar_rus.jpeg')
-            self.bar_rus_rect = self.bar_fr.get_rect(center = (WIDTH/2,HEIGHT/2))"""
 
-#self.map = ["bar_ang", "bar_fr", "bar_rus", "hotel", "inc", "toit"]
+
+""" Botte = ["tatane", "fagot", "babouche", "chaussure", "ranger", "soulier", "pompe", "savate", "godillot",
+            "soulier", "sabot", "godasse"]
+    random.shuffle(Botte)
+    Botte[0],Botte[1],Botte[2],Botte[3]"""
+

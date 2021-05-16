@@ -1,6 +1,7 @@
 import pygame
 from player import *
 from data import *
+from mots import *
 
 class Game:
 
@@ -9,7 +10,12 @@ class Game:
 
     def start(self):
         self.is_playing = True
-        
+        #affichage des synonymes
+
+
+    def win (self):
+        print("YOU WIN")
+
     def game_over(self):
         print("YOU LOOSE")
 
