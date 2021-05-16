@@ -39,8 +39,6 @@ listeMap = [pygame.image.load('img/map/bar_ang.jpeg'),
 zone = random.choice(listeMap)
 zone = pygame.transform.scale(zone, (WIDTH, HEIGHT))
 
-#FONT
-
 
 #Appel des classes pour le main
 game = Game()
